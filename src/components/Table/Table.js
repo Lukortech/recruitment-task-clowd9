@@ -17,7 +17,7 @@ import Chip from "@material-ui/core/Chip";
 
 import sortArrayObj from "../../utils/sort";
 
-import Head from "../TableHead/TableHead"; // TABLE HEAD
+import Head from "../TableHead/TableHead"; //  HEAD
 
 const useStyles = makeStyles((theme) => ({
   table: {
