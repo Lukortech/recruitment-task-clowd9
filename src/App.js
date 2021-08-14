@@ -9,7 +9,7 @@ function App() {
   const [searchBy, setSearchBy] = useState("all");
   const [searchInput, setSearchInput] = useState("");
 
-  const data = searchItem(userData, searchBy, searchInput); // pofiltrowane data z funkcji
+  const data = searchItem(userData, searchBy, searchInput); // pofiltrowane data z funkcji search
 
   return (
     <>
