@@ -1,5 +1,27 @@
-// import * as DB from "../db/mock.json";
+import React, { useState } from "react";
+import SearchBar from "./components/SearchBar/SearchBar";
+import UserTable from "./components/Table/Table";
 
-const App = () => <h1>Hello World !</h1>
+import userData from "./db/mock";
+import searchItem from "./utils/search";
+
+function App() {
+  const [searchBy, setSearchBy] = useState("all");
+  const [searchInput, setSearchInput] = useState("");
+
+  const data = searchItem(userData, searchBy, searchInput); // pofiltrowane data z funkcji
+
+  return (
+    <>
+      <SearchBar
+        searchBy={searchBy}
+        setSearchBy={setSearchBy}
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+      />
+      <UserTable data={data} />
+    </>
+  );
+}
 
 export default App;
